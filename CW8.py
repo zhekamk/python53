@@ -3,19 +3,19 @@
 from CW4 import digits
 
 
-def add10(x):
-    return x + 10
-
-nums=[1,2,3,4,5]
-for num in nums:
-    print(add10(num))
-
-for num in nums:
-    print((lambda x: x+10)(num))
-
-students=[['Bob', 70],
-        ['Jane', 80],
-        ['Piter', 60]]
+# def add10(x):
+#     return x + 10
+#
+# nums=[1,2,3,4,5]
+# for num in nums:
+#     print(add10(num))
+#
+# for num in nums:
+#     print((lambda x: x+10)(num))
+#
+# students=[['Bob', 70],
+#         ['Jane', 80],
+#         ['Piter', 60]]
 
 print(students)
 
@@ -89,17 +89,17 @@ result=list(map(lambda a,b: a**b, nums1, nums2))
 print(result)
 
 
-prices=[100,33,67,99,45]
-expensive=list(filter(lambda x:x>50,prices))
-print(prices)
-print(expensive)
-
-userpass=['1111','sfssf','3232']
-
-for log, password in zip(userLogs, userpass):
-    print(f'login:{log}, password: {password}')
-
-print(list(zip(userLogs, userpass)))
+# prices=[100,33,67,99,45]
+# expensive=list(filter(lambda x:x>50,prices))
+# print(prices)
+# print(expensive)
+#
+# userpass=['1111','sfssf','3232']
+#
+# for log, password in zip(userLogs, userpass):
+#     print(f'login:{log}, password: {password}')
+#
+# print(list(zip(userLogs, userpass)))
 
 
 

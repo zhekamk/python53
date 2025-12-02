@@ -1,0 +1,21 @@
+{
+    "company": "apple",
+    "employees": [
+        {
+            "name": "tim cook",
+            "age": 55,
+            "skills": [
+                "python",
+                "comm"
+            ]
+        },
+        {
+            "name": "tim cook",
+            "age": 55,
+            "skills": [
+                "python",
+                "comm"
+            ]
+        }
+    ]
+}

@@ -2,38 +2,38 @@ import pickle
 import string
 import os
 import json
-from xml.etree.ElementTree import indent
 
-# #1
-# print('-'*20,'#1','-'*20)
-#
-# def serialize(file_name, data):
-#     with open(file_name, 'wb') as file:
-#         pickle.dump(data, file)
-#
-#
-# def deserialize(file_name):
-#     with open(file_name, 'rb') as file:
-#         data = pickle.load(file)
-#     return data
-#
-# def main():
-#     try:
-#         numbers = input('Введіть цілі числа: ')
-#         numbers = numbers.split()
-#         numbers1 = list(map(int, numbers))
-#         print(f'список до серіалізації: {numbers1}')
-#         file_name = "numbers.data"
-#         serialize(file_name, numbers1)
-#         numbers_deser = deserialize(file_name)
-#         print(f"список після серіалізації: {numbers_deser}")
-#     except ValueError:
-#         print('Помилка! Введено не вірні дані! Введіть цілі числа, використовуючи пробіл!')
-#     except Exception as ex:
-#         print(ex)
-#
-#
-# main()
+
+#1
+print('-'*20,'#1','-'*20)
+
+def serialize(file_name, data):
+    with open(file_name, 'wb') as file:
+        pickle.dump(data, file)
+
+
+def deserialize(file_name):
+    with open(file_name, 'rb') as file:
+        data = pickle.load(file)
+    return data
+
+def main():
+    try:
+        numbers = input('Введіть цілі числа: ')
+        numbers = numbers.split()
+        numbers1 = list(map(int, numbers))
+        print(f'список до серіалізації: {numbers1}')
+        file_name = "numbers.data"
+        serialize(file_name, numbers1)
+        numbers_deser = deserialize(file_name)
+        print(f"список після серіалізації: {numbers_deser}")
+    except ValueError:
+        print('Помилка! Введено не вірні дані! Введіть цілі числа, використовуючи пробіл!')
+    except Exception as ex:
+        print(ex)
+
+
+main()
 
 #2
 print('-'*20,'#2','-'*20)
@@ -115,7 +115,7 @@ def menu():
         print(ex)
 
 
-#menu()
+menu()
 
 #3
 print('-'*20,'#3','-'*20)
@@ -252,5 +252,5 @@ def mainDict():
     except Exception as ex:
         print(ex)
 
-#first_data()
+first_data() # коментується після першого виклику
 mainDict()

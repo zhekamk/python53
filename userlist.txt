@@ -3,6 +3,5 @@
     "ivan_ko": "Ivanko_2024",
     "olena_s": "OlenkaBestPass",
     "guest": "password123",
-    "max_z": "StrongPass#456",
-    "nnn": "888"
+    "max_z": "StrongPass#456"
 }

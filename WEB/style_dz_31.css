@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: #f0f0f0;
+}
+
+.list-container {
+    background-color: #f19bad;
+    padding: 20px;
+    width: 400px;
+}
+
+.fruit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fruit-list li {
+    background-color: #c46a7d;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+}
+
+.fruit-list li span {
+    background-color: #8e3a50;
+    padding: 10px 20px;
+    min-width: 80px;
+}
+
+.fruit-list li:last-child {
+    margin-bottom: 0;
+}

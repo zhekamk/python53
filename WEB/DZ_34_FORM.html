@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення Суші | Космос</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+
+        body {
+            background: #050505;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .planet {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            /* Створюємо вигляд планети градієнтами */
+            background: radial-gradient(circle at 30% 30%, #4facfe 0%, #00f2fe 40%, #000 100%);
+            box-shadow: 0 0 40px rgba(79, 172, 254, 0.6), inset -10px -10px 20px #000;
+            position: relative;
+            overflow: hidden;
+            animation: rotatePlanet 8s linear infinite;
+        }
+
+
+        .planet::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: repeating-linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 10%, transparent 20%);
+            animation: moveClouds 4s linear infinite;
+        }
+
+        @keyframes rotatePlanet {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes moveClouds {
+            from { left: -100%; }
+            to { left: 0%; }
+        }
+
+
+        .order-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 80px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control, .form-select {
+            background: #111;
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: #1a1a1a;
+            border-color: #4facfe;
+            color: white;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background: #4facfe;
+            border: none;
+            font-weight: bold;
+            padding: 12px;
+        }
+
+        .btn-submit:hover { background: #00f2fe; }
+    </style>
+</head>
+<body>
+
+    <div class="container d-flex flex-column align-items-center">
+        <div class="order-container">
+            <div class="planet"></div>
+
+            <h2 class="text-center mb-4">Замовлення Суші</h2>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Ім'я</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Телефон</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Адреса доставки</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Кількість паличок</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Вид паличок</label>
+                        <select class="form-select">
+                            <option>Звичайні</option>
+                            <option>Навчальні</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Оберіть суші</label>
+                    <select class="form-select" required>
+                        <option value="">-- Список суші --</option>
+                        <option>Філадельфія</option>
+                        <option>Каліфорнія</option>
+                        <option>Дракон</option>
+                    </select>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="napkins">
+                    <label class="form-check-label" for="napkins">Чи потрібні серветки?</label>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Додатковий коментар</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-submit w-100 text-dark">ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-center py-3 text-muted">
+        <small>&copy; 2024 Sushi Space Delivery</small>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

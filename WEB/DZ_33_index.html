@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Головна</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+
+        body {
+            background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+
+        .earth-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            border-radius: 50%;
+
+            background: url('https://upload.wikimedia.org');
+            background-size: cover;
+
+            box-shadow: inset -30px -30px 50px #000, 0 0 50px rgba(70, 130, 180, 0.4);
+
+            animation: rotateEarth 15s linear infinite;
+        }
+
+
+        .earth-container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            box-shadow: inset 10px 10px 20px rgba(255, 255, 255, 0.2);
+            z-index: 2;
+        }
+
+
+        @keyframes rotateEarth {
+            from { background-position: 0 0; }
+            to { background-position: 630px 0; } /* Ширина картинки для повного циклу */
+        }
+
+
+        .stars-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: transparent url('https://s3-us-west-2.amazonaws.com') repeat;
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+            <a class="navbar-brand" href="DZ_33_index.html">Сайт</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="DZ_33_index.html">Головна</a>
+                <a class="nav-link" href="DZ_33_about.html">Про нас</a>
+                <a class="nav-link" href="DZ_33_contacts.html">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5 mt-5">
+        <div class="earth-container"></div>
+        <div class="container py-5">
+            <h1>Привіт! Це головна сторінка</h1>
+            <p>Простий адаптивний сайт на Bootstrap.</p>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Перша картка</h5>
+                        <p>Просто текст для наповнення сторінки.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Друга картка</h5>
+                        <p>Ще трохи інформації у зручному форматі.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Третя картка</h5>
+                        <p>Bootstrap автоматично підлаштує їх під екран.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Мій Сайт</p>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
